@@ -1,0 +1,144 @@
+.upload
+    &-container
+        position: relative
+        width: 100%
+        margin-bottom: 50px
+    &-form
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        width: 100%
+        height: 100%
+        padding: 50px 30px
+        background: #e0f2f7
+        outline: 2px dashed rgba(0,0,0,0.4)
+        outline-offset: -15px
+        transition: all 0.3s
+        &__image
+            width: 12%
+            height: auto
+            margin-bottom: 20px
+            user-select: none
+        &__content
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            &--span
+                margin-left: 10px
+        &__input 
+            width: 0.1px
+            height: 0.1px
+            opacity: 0
+            position: absolute
+            z-index: -10
+        label 
+            font-weight: bold
+            cursor: pointer
+            &:hover
+                text-decoration: underline
+    &-loading
+        display: none
+        &__content
+            position: relative
+            font-weight: bold
+
+.upload-loading.active
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #e0f2f7
+    display: flex
+    justify-content: center
+    align-items: center
+
+.upload-form.active 
+    background: rgba(#e0f2f7, 0.4)
+    outline-offset: -20px
+
+.upload-table
+    &__row
+        display: flex
+        justify-content: space-between
+        border: 1px solid #e0f2f7
+        border-top: 0
+        &--head
+            background: #e0f2f7
+            font-weight: bold
+    &__col 
+        border-right: 1px solid #e0f2f7
+        flex: 1
+        padding: 5px 8px
+        min-width: 80px
+        overflow: hidden
+        &:last-child
+            border-right: 0
+
+.upload-table
+    &__pagination
+        display: flex
+        align-items: center
+        justify-content: center
+
+.upload-pagination 
+    margin-top: 20px
+    &__num 
+        min-width: 25px
+        height: 25px
+        padding: 5px
+        margin-left: 5px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #e0f2f7
+        cursor: pointer
+        &:first-child 
+            margin-left: 0
+        &:hover 
+            background: darken(#e0f2f7 , 10%)  
+
+.upload-pagination__num.active 
+    background: darken(#e0f2f7 , 10%)         
+
+.gooey
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 142px
+    height: 40px
+    margin: -20px 0 0 -71px
+    .gooey-txt
+        text-align: center
+        margin-top: 50px
+    .dot
+        position: absolute
+        width: 16px
+        height: 16px
+        top: 12px
+        left: 15px
+        background: #70797B
+        border-radius: 50%
+        transform: translateX(0)
+        animation: dot 2.8s infinite
+    .dots
+        transform: translateX(0)
+        margin-top: 12px
+        margin-left: 31px
+        animation: dots 2.8s infinite
+        span
+            display: block
+            float: left
+            width: 16px
+            height: 16px
+            margin-left: 16px
+            background: #70797B
+            border-radius: 50%
+
+@keyframes dot
+    50%
+        transform: translateX(96px)
+@keyframes dots
+    50%
+        transform: translateX(-31px)

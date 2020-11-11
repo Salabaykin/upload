@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <div class="upload">
+
+        <div class="upload-container">
+
+            <form class="upload-form" method="POST" action="send.php">
+                <img class="upload-form__image" src="images/upload.svg">
+                <div class="upload-form__content">
+                    <input id="file-input" class="upload-form__input" type="file" name="file" multiple>
+                    <label for="file-input">Выберите файл</label>
+                    <span class="upload-form__content--span">или перетащите его сюда</span>
+                </div>
+            </form>
+
+            <div class="upload-loading">
+                <div class="upload-loading__content">
+                    <div class="gooey">
+                        <span class="dot"></span>
+                        <div class="dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="gooey-txt">Идет загрузка...</div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <!-- /.upload-container -->
+
+        <div class="upload-table">
+
+            <div class="upload-table__row upload-table__row--head">
+                <div class="upload-table__col">1</div>
+                <div class="upload-table__col">12</div>
+                <div class="upload-table__col">123</div>
+                <div class="upload-table__col">1234</div>
+                <div class="upload-table__col">12345</div>
+            </div>
+
+            <div class="upload-table__row">
+                <div class="upload-table__col">col1</div>
+                <div class="upload-table__col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nesciunt.</div>
+                <div class="upload-table__col">col123</div>
+                <div class="upload-table__col">col1234</div>
+                <div class="upload-table__col">col12345</div>
+            </div>
+
+            <div class="upload-table__row">
+                <div class="upload-table__col">col11</div>
+                <div class="upload-table__col">col112</div>
+                <div class="upload-table__col">col1123</div>
+                <div class="upload-table__col">col11234</div>
+                <div class="upload-table__col">Lorem ipsum dolor sit amet consectetur.</div>
+            </div>
+
+            <div class="upload-table__pagination upload-pagination">
+                <div class="upload-pagination__num">1</div>
+                <div class="upload-pagination__num active">2</div>
+                <div class="upload-pagination__num">3</div>
+                <div class="upload-pagination__num">4</div>
+            </div>
+            <!-- /.upload-table__pagination -->
+
+        </div>
+        <!-- /.upload-table -->
+
+    </div>
+    <!-- /.upload -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
